@@ -1,20 +1,9 @@
+const { strictEslint } = require("@umijs/fabric");
+
 module.exports = {
-  env: {
-    browser: true,
-    es6: true
-  },
-  extends: "eslint:recommended",
+  ...strictEslint,
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 2018,
-    sourceType: "module"
-  },
-  plugins: ["react"],
-  rules: {}
+    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION: true,
+    page: true
+  }
 };

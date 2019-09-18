@@ -105,15 +105,69 @@ export default {
           component: "../layouts/BasicLayout",
           authority: ["admin", "user"],
           routes: [
-            {
-              path: "/",
-              redirect: "/tollstation"
-            },
+            //{
+            //  path: '/',
+            //  redirect: '/dashboard/tollstation',
+            //},
             {
               name: "defaultpage",
               path: "/dashboard/tollstation",
               icon: "home",
-              component: "./dashboard/tollstation"
+              component: "Welcome"
+            },
+            {
+              path: "/datamanager",
+              name: "数据管理",
+              icon: "home",
+              routes: [
+                {
+                  name: "流水查询",
+                  path: "/datamanager/recordsearch",
+                  component: "./Welcome"
+                },
+                {
+                  name: "轨迹查询",
+                  path: "/datamanager/tracksearch",
+                  icon: "home",
+                  component: "./Welcome"
+                },
+                {
+                  name: "异常车辆",
+                  path: "/datamanager/excpcarsearch",
+                  icon: "home",
+                  component: "./Welcome"
+                }
+              ]
+            },
+            {
+              name: "车辆档案",
+              path: "/a3",
+              icon: "home",
+              component: "Welcome"
+            },
+            {
+              name: "RSU档案",
+              path: "/a4",
+              icon: "home",
+              component: "Welcome"
+            },
+            {
+              name: "软件厂商档案",
+              path: "/a5",
+              icon: "home",
+              component: "Welcome"
+            },
+            {
+              name: "名单布控",
+              path: "/a6",
+              icon: "home",
+              component: "Welcome"
+            },
+            {
+              name: "系统管理",
+              path: "/a10",
+              icon: "home",
+              component: "Welcome"
             },
             {
               path: "/welcome",
@@ -121,7 +175,6 @@ export default {
               icon: "smile",
               component: "./Welcome"
             },
-
             {
               component: "./404"
             }
